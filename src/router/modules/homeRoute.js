@@ -3,7 +3,7 @@ export default [
     // 重定向到自定义的首页
     {
         path: '/',
-        redirect: '/xzDashboardHome'
+        redirect: '/logManage'
     },
     {
         path: '/',

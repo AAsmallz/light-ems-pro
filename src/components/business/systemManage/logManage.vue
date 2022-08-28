@@ -67,6 +67,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
     name: 'logManage',
     data() {
@@ -102,6 +103,14 @@ export default {
             console.log('currentChange=', val);
             this.currentPage = val;
         }
+    },
+    mounted() {
+        axios.post('/api/logManage/list').then((res) => {
+            console.log(res);
+            if (res.data.code === '200') {
+                this.dataSource = res.data.data.list;
+            }
+        });
     }
 };
 </script>

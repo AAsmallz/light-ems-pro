@@ -13,6 +13,8 @@
         password: {{ password }}
         <br />
         <el-button type="success" size="small" @click="updateUsername(obj)">触发vuex的mutation</el-button>
+        <br />
+        <p>环境变量测试：{{ baseUrl }}</p>
     </div>
 </template>
 
@@ -26,7 +28,8 @@ export default {
                 username: 'Bob',
                 password: '456789'
             },
-            flag: false
+            flag: false,
+            baseUrl: process.env.VUE_APP_MOCK_BASEURL
         };
     },
     computed: {

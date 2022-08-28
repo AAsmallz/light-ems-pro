@@ -5,6 +5,7 @@
             <i v-if="!collapse" class="el-icon-s-fold"></i>
             <i v-else class="el-icon-s-unfold"></i>
         </div>
+        <el-button style="position: absolute; right: 0; margin-right: 20px" size="mini" @click="onBack">退出</el-button>
     </div>
 </template>
 
@@ -22,6 +23,10 @@ export default {
         collapseChange() {
             this.collapse = !this.collapse;
             bus.$emit('collapse', this.collapse);
+        },
+        // 简易退出
+        onBack() {
+            this.$router.replace('/login');
         }
     }
 };

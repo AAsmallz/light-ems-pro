@@ -9,6 +9,9 @@ import 'element-ui/lib/theme-chalk/index.css';
 import zhLocale from 'element-ui/lib/locale/lang/zh-CN';
 import paginationTextConfig from '@/utils/paginationTextConfig';
 
+// 引入mock接口初始化文件
+import '@/mock/index';
+
 Vue.use(ElementUI, { locale: { ...zhLocale, ...paginationTextConfig } });
 
 Vue.config.productionTip = false;
